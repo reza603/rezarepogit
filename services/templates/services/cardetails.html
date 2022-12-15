@@ -1,0 +1,63 @@
+{% extends 'services/step2.html' %}
+
+{% block page_title %}
+All services
+{% endblock page_title %}
+
+{% block content %}
+
+<section id="pricing" class="white">
+    <div class="container" style="background-color: black;margin: auto;align-items: center;text-align: center;" >
+        <div     class="center gap fade-down section-heading">
+            <h2 class="main-title" style="color: red;">Car detail</h2>
+            <hr style="color: red;">
+            <p style="color: red;">Of an or game gate west face shed. ﻿no great but music too old found arose.</p>
+        </div>
+        <div class="gap"></div>
+        <div id="pricing-table" class="row">
+            <div class=" fade-down " style="margin: auto;width: 60%;">
+                <ul class="plan plan1" style="background-color: rgb(16, 12, 12);color: red;" >
+                  
+                  
+                    <li>
+                      <table class="table table-bordered " style="border: 1px red solid;font-size: x-large;border-color: red;">
+                        <thead style="text-align: center;border-color: red;">
+                          <tr style="text-align: center;border-color: red;">
+                            <th scope="row" style="text-align: center;border-color: red;">#</th>
+                            <th >First</th>
+                            <th >Last</th>
+                            <th >Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody style="text-align: center;border-color: red;">
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                        
+                        </tbody>
+                      </table>
+                    </li>
+                  
+                 
+                    <li class="plan-action">
+                        <a href="{% url 'step2' %}" class="btn btn-outlined btn-primary btn-md btn-white"  style="color: red;">continue</a>
+                    </li>
+                </ul>
+            </div><!--/.col-md-3-->
+        
+        </div>
+        <div class="gap"></div>
+    </div>
+</section>  
+
+  
+{% endblock content%}
