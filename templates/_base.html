@@ -34,30 +34,53 @@
          .inline{
             max-width:300px;
             margin:auto;
-            border: 1px rgb(246, 241, 241) solid ;
+            border: 2px yellow solid ;
             padding-top: 15px;
             text-align: center;
+            background-color: rgb(87, 74, 74);
+            border-radius: 15px;
         }
  
 
+        .input-field:hover{
 
-              
-      
+
+            background-color: rgb(246, 201, 133);
+            border-color: blue;
+        }
+
+        #sub:hover{
+         background-color: rgb(246, 201, 133);
+          border-color: blue;
+              } 
+        #loc:hover{
+
+       background-color: rgb(246, 201, 133);
+        border-color: blue;
+}     
+       #loc{
+        background: url("{%  static 'services/images/loc.png'%}") no-repeat ;
+        background-color: transparent;
           
-      
-          
+       }
+         #sub{
+            background-color: transparent;
+             border: 2px yellow solid ;border-radius: 10px;
+
+           
+         }  
         .input-field {
             float: left;
             width: 100%;
             padding: 10px;
             text-align: center;
             margin-bottom: 3px;
-         
+           border-radius: 10px;
             font-family: digital-7;
             background: url("{%  static 'services/images/platesmal.png'%}") no-repeat;
             background-position:0;
             padding-left:10px;
-            border: 3px rgb(238, 221, 221) solid;
+            border: 2px yellow solid ;
             color: white;
             font-size: x-large;
             font-weight: bolder ;
@@ -136,13 +159,13 @@
                                 	<span style="color:red" class="home-icon pe-7s-gleam bounce-in"></span>
                                     <h2 class="boxed animation animated-item-1 fade-down" style="color: red;">MOT centre </h2>
                                     <div id="form">
-                                    <form class="inline boxed animation animated-item-1 fade-down" action="{% url 'details' %}">
+                                    <form class="inline boxed animation animated-item-1 fade-down" action="{% url 'details' %}"  style="background-color:rgb(239, 52, 49) ;"/>
                                         {% csrf_token %}    
-                                        <input class="input-field form-control" type="text" required aria-required="*">
-                                        <input class="input-field form-control" type="text"  required aria-required="*" style="  background: url({%  static 'services/images/loc.png'%}) no-repeat no-repeat;">
+                                        <input class="input-field form-control" type="text" required aria-required="*" />
+                                        <input class="input-field form-control" type="text"  required aria-required="*" id="loc"/> 
 
                                         
-       <input type="submit" class="btn  animation bounce-in" style="background-color: red;">Get Qute</submit>
+                                        <input type="submit" value="Get Qute" class="btn   animation bounce-in"    id="sub"/>
                                           </form>
                                          
                                      </div>
