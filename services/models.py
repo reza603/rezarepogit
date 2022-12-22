@@ -11,7 +11,7 @@ class Services (models.Model):
        ('pub','done'),
        ('drf','register'),
       )
-
+     id=models.BigAutoField
      title= models.CharField(max_length=100)
      text= models.CharField(max_length=100)
      author= models.ForeignKey('auth.user',on_delete=models.CASCADE,blank=True)
@@ -32,7 +32,7 @@ class Services (models.Model):
 
 
      def __str__(self):
-         return self.title
+         return self.id
 
 
 

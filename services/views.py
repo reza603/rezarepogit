@@ -25,7 +25,7 @@ def get_context_data(self,**kwargs):
     context=super.get_context_data(**kwargs)
     context['add_to_cart_form']=AddToCartProductForm()
     return context
-def details(request):
+def cardetails(request):
     #   response=None
     #   url= "https://uat.driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles"
     #   payload = "{\n\t\"registrationNumber\": \"AA19AAA\"\n}"
@@ -42,15 +42,19 @@ def details(request):
        
     #   print(info["engineCapacity"])
       return render( request,'services/cardetails.html')
-def step2(request):
+def showServicePerApi(request):
 
          
            return render( request,'services/servicesStep2.html')
         #    return (response.text.encode('utf8'))
                   
-   
+class getallservicesviewstep2(generic.ListView):
+    model=Services
+    template_name = 'services/servicesStep2.html'
+    context_object_name ='services'
 
 class getallservicesview(generic.ListView):
+    model=Services
     template_name = 'services/services.html'
     context_object_name ='services'
 

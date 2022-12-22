@@ -17,7 +17,7 @@ def add_to_cart_view(request, service_id):
         cleaned_date = form.cleaned_data
         quantity = cleaned_date['quantity']
         cart.add(service,quantity)
-    return  redirect('cart_detail')
+    return  redirect('cart:cart_detail')
 
 
 

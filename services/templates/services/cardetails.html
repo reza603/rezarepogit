@@ -1,4 +1,4 @@
-{% extends 'services/step2.html' %}
+{% extends 'services/_base2.html' %}
 
 {% block page_title %}
 All services
@@ -18,8 +18,7 @@ All services
             <div class=" fade-down " style="margin: auto;width: 60%;">
                 <ul class="plan plan1" style="background-color: rgb(16, 12, 12);color: red;" >
                   
-                  
-                    <li>
+                      <li>
                       <table class="table table-bordered " style="border: 1px red solid;font-size: x-large;border-color: red;">
                         <thead style="text-align: center;border-color: red;">
                           <tr style="text-align: center;border-color: red;">
@@ -49,7 +48,7 @@ All services
                   
                  
                     <li class="plan-action">
-                        <a href="{% url 'step2' %}" class="btn btn-outlined btn-primary btn-md btn-white"  style="color: red;">continue</a>
+                        <a href="{% url 'showServicePerApi' %}" class="btn btn-outlined btn-primary btn-md btn-white"  style="color: red;">continue</a>
                     </li>
                 </ul>
             </div><!--/.col-md-3-->
