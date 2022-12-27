@@ -7,6 +7,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | Impact By Distinctive Themes</title>
+ 
+    {% block style %}
+    {% endblock style %}
     <link href="{%  static 'services/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{%  static 'services/css/font-awesome.min.css' %}" rel="stylesheet">
     <link href="{%  static 'services/css/pe-icons.css'  %}" rel="stylesheet">
@@ -71,7 +74,7 @@ background-color: red;
      
     </style>
 
-  
+ 
 </head><!--/head-->
 <body style="background-color: black;">
 <div id="preloader"></div>
@@ -197,6 +200,9 @@ background-color: red;
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script>
     <script src="{%  static 'services/js/init.js'%}"></script>
 
+    {% block script %}
+         
+    {% endblock script %}
 </body>
 </html>
         

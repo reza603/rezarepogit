@@ -21,9 +21,9 @@ class Cart:
         service_id= str(service.id)
 
         if service_id not in self.cart:
-            self.cart[service_id]= {'quantity': quantity}
+            self.cart[str(service_id)]= {'quantity': quantity}
         else:
-            self.cart[service_id][quantity]+= quantity
+            self.cart[str(service_id)]['quantity']+= quantity
         self.save()
 
     def remove(self,service):
@@ -36,11 +36,12 @@ class Cart:
 
     def __iter__(self):
         service_ids=self.cart.keys()
-        services=Services.objects.filter(id__in=service_ids)
+        services=Services.objects.filter(id__in=service_ids).all()
         cart=self.cart.copy()
 
-        for service in Services:
+        for service in services:
             cart[str(service.id)]['service_obj']=service
+            print(service)
 
         for item in cart.values():
             yield item
@@ -56,10 +57,10 @@ class Cart:
 
 
     def get_total_price(self):
-        service_ids=self.cart.keys()
-        services=Services.objects.filter(id__in=service_ids)
-
-        return sum(services.price for service in Services)
+        # service_ids=self.cart.keys()
+        # services=Services.objects.filter(id__in=service_ids)
+        return '66666'
+        # return sum(services.price for service in Services)
 
 
 

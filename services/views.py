@@ -21,10 +21,7 @@ from django.urls import reverse_lazy
 from .models import Services
 from cart.forms import AddToCartProductForm
 
-def get_context_data(self,**kwargs):
-    context=super.get_context_data(**kwargs)
-    context['add_to_cart_form']=AddToCartProductForm()
-    return context
+
 def cardetails(request):
     #   response=None
     #   url= "https://uat.driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles"
@@ -42,16 +39,21 @@ def cardetails(request):
        
     #   print(info["engineCapacity"])
       return render( request,'services/cardetails.html')
-def showServicePerApi(request):
+# def showServicePerApi(request):
 
          
-           return render( request,'services/servicesStep2.html')
-        #    return (response.text.encode('utf8'))
+#            return render( request,'services/servicesStep2.html')
+#         #    return (response.text.encode('utf8'))
                   
 class getallservicesviewstep2(generic.ListView):
     model=Services
     template_name = 'services/servicesStep2.html'
     context_object_name ='services'
+    
+    def get_context_data(self,**kwargs):
+     context=super().get_context_data(**kwargs)
+     context['add_to_cart_form']=AddToCartProductForm()
+     return context
 
 class getallservicesview(generic.ListView):
     model=Services

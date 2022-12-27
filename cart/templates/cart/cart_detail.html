@@ -1,0 +1,105 @@
+{% extends 'services/_base2.html' %}
+{% load static  %}
+{% block page_title %}
+All services
+{% endblock page_title %}
+
+{% block content %}
+
+<section id="pricing" style="background-color:#171414;color:red">
+    <div class="container" >
+        <div     class="center gap fade-down section-heading">
+     
+        </div>
+        <div class="gap"></div>
+        <div id="pricing-table" class="row">
+         
+                       <!-- Main Content Wrapper Start -->
+
+        <div class="main-content-wrapper" style="background-color:#171414;color:red">
+            <div class="page-content-inner ptb--80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 mb-md--50">
+                            <form class="cart-form"  style="background-color:#171414;color:red;font-style:bold"   action="#">
+                                <div class="row no-gutters">
+                                    <div class="col-12">
+                                        <div class="table-content table-responsive">
+                                        
+                                            <table class="table text-center center " style="color:red;border-color:red">
+                                                <thead class="center" style="color:red;border-color:red">
+                                                    <tr  style="color:red;border-color:red">
+                                                        <th  class="text-center">&nbsp;X</th>
+                                                        <th  class="text-center">عکس محصول</th>
+                                                        <th class="text-center">نام محصول</th>
+                                                        <th class="text-center">قیمت</th>
+                                                       
+                                                                                                             
+                                                    </tr>
+                                                </thead>
+                                                <tbody  style="color:red;border-color:red">
+                                                {% for item in cart %}
+                                                    <tr  style="color:red;border-color:red">
+                                                        <td  style="color:red;border-color:red"><a href=""><i  style="color:red;border-color:red"  class="fa fa-trash "  aria-hidden="true"> </i></a></td>
+                                                        <td class="product-thumbnail text-center" style="color:red;border-color:red">
+                                                            <img src="{% static 'cart/assets/img/products/prod-10-70x88.jpg' %}" alt="Product Thumnail">
+                                                        </td>
+                                                        <td class="product-name wide-column  text-center"  style="color:red;border-color:red">
+                                                            
+                                                                {{item.service_obj.title}}
+                                                            
+                                                        </td>
+                                                        <td class="product-price  text-center"  style="color:red;border-color:red">
+                                                            <span class="product-price-wrapper">
+                                                                <span class="money">{{item.service_obj.price}}</span>
+                                                            </span>
+                                                        </td>
+                                                   
+                                                    </tr>
+                                                {% endfor %}
+                                                <tr style="color:red">
+                                                   
+                                                    <td  class="product-name wide-column  text-center"  style="color:red;border-color:red">
+                                                        
+                                                        <button type="button" class="btn  btn-info">Book another service</button> 
+                                                        
+                                                    </td>
+                                                    <td  class="  text-center"  style="color:red;border-color:red">
+                                                        <button type="button" class="btn btn-success">Final Book</button>
+                                                    </td>
+                                                    <td  class="  text-right"  style="color:red;border-color:red">
+                                                    <span style="color:red"> Total : </span>
+                                                    </td>
+                                                    <td  class="  text-left"  style="color:red;border-color:red">
+                                                        <div class="cart-calculator__item--value">
+                                                            <span class="product-price-wrapper">
+                                                                <span class="money">۳۴۶,۰۰۰ تومان</span>
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                </div>
+                            </form>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content Wrapper Start -->
+        </div>
+        <div class="gap"></div>
+    </div>
+</section>  
+
+  
+{% endblock content%}
+
+                  
