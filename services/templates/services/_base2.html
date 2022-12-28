@@ -10,21 +10,17 @@
  
     {% block style %}
     {% endblock style %}
+ 
     <link href="{%  static 'services/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{%  static 'services/css/font-awesome.min.css' %}" rel="stylesheet">
     <link href="{%  static 'services/css/pe-icons.css'  %}" rel="stylesheet">
     <link href="{%  static 'services/css/prettyPhoto.css'  %}" rel="stylesheet">
     <link href="{%  static 'services/css/animate.css'  %}" rel="stylesheet">
     <link href="{%  static 'services/css/style.css'  %}" rel="stylesheet">
-    <!-- <link href="{%  static 'services/color-wizard/css/style.css'  %}" rel="stylesheet"> -->
+  
 
     <script src="{%  static 'services/js/jquery.js'  %}"></script>
-    <!-- <script src="{%  static 'services/color-wizard/js/wizardjs.js'  %}"></script> -->
-
-    <!--[if lt IE 9]>
-    <script src="{%  static 'services/js/html5shiv.js'  %}"></script>
-    <script src="{%  static 'services/js/respond.min.js'  %}"></script>
-    <![endif]-->
+  
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon" sizes="144x144" href="images/ico/apple-touch-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/ico/apple-touch-icon-114x114.png">
@@ -33,6 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="{%  static 'services/color-wizard/css/style.css' %}"/>
+
     <style>
          .inline{
             max-width:400px;
@@ -74,7 +71,7 @@ background-color: red;
      
     </style>
 
- 
+
 </head><!--/head-->
 <body style="background-color: black;">
 <div id="preloader"></div>
@@ -193,13 +190,13 @@ background-color: red;
         </footer><!--/#footer-->
     </div>
 
-	
     <script src="{%  static 'services/js/plugins.js' %}"></script>
     <script src="{%  static 'services/js/bootstrap.min.js' %}"></script>
     <script src="{%  static 'services/js/jquery.prettyPhoto.js'%}"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"  type="text/javascript"></script>
     <script src="{%  static 'services/js/init.js'%}"></script>
 
+   ></script>
     {% block script %}
          
     {% endblock script %}

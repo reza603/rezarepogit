@@ -42,9 +42,11 @@ INSTALLED_APPS = [
     'customer',
     'cart',
     'accounts',
+    'calander',
     
-         'taggit',
-     'timetable',
+    
+     
+     
    ]
 
 MIDDLEWARE = [
