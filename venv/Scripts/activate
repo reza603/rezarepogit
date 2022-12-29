@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Reza\Downloads\project1\copy\venv"
+VIRTUAL_ENV="C:\Users\user\Desktop\git\rezarepogit\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
